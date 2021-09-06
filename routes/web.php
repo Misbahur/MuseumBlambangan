@@ -37,6 +37,12 @@ Route::get('/contact', function () {
     ]);
 });
 
+Route::get('/form-booking', function () {
+    return view('/Tiket/tiket',[
+        "title" => "Form-Booking"
+    ]);
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
