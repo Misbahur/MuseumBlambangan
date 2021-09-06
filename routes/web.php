@@ -14,7 +14,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('/Menu_Utama/beranda',[
+        "title" => "Beranda"
+    ]);
+});
+
+Route::get('/koleksi', function () {
+    return view('/Menu_Utama/koleksi',[
+        "title" => "Koleksi"
+    ]);
+});
+
+Route::get('/about', function () {
+    return view('/Menu_Utama/AboutUs',[
+        "title" => "Tentang"
+    ]);
+});
+
+Route::get('/contact', function () {
+    return view('/Menu_Utama/Contact',[
+        "title" => "Kontak"
+    ]);
 });
 
 Auth::routes();
