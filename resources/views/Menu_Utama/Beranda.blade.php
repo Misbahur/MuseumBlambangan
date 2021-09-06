@@ -22,7 +22,8 @@
       <h5>BUKA</h5>
       <p>Layanan Kunjungan Senin-Jum'at</p>
       <div class="slider-btn" >
-        <button class="btn btn-1">PESAN SEKARANG</button>
+
+          <a class="btn btn-1" href="/form-booking">PESAN SEKARANG</a>
       </div>
       </div>
     </div>

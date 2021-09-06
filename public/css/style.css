@@ -110,7 +110,7 @@ header ul li a {
 .slider-btn .btn {
     background-color: #011936;
     color: white;
-    border-radius: 0;
+    border-radius: 5px;
     padding: 1.5rem 2rem;
     font-size: 1rem;
     margin-right: 15px ;
