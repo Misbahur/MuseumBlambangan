@@ -22,7 +22,7 @@ body{
     transition: 0.6s;
     padding: 15px 100px;
     z-index: 100000;
-    background: #e4e7ec;
+    background: #14213D;
 }
 
 .logo {
@@ -369,8 +369,9 @@ li {
     text-indent: 0px !important;
     text-align: start !important;
     text-align-last: start !important;
-	color:rgb(255, 160, 19);
+	color:rgb(66, 66, 65);
     font-family: italic;
+    font-weight: bold;
 }
 dd {
     font-family: italic;
