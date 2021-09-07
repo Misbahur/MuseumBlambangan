@@ -5,7 +5,7 @@
          
             <div class="gallery mt-5">
               <br>
-              <div class="text-center">KOLEKSI</div>
+              <div class="text-center ">KOLEKSI</div>
               <br>
               <br>
               <div class="card">

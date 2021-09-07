@@ -13,7 +13,7 @@
 
 <!-- Navbar -->  
 
-<nav class="navku navbar navbar-expand-lg navbar-dark bg-danger ">
+<nav class="navku navbar navbar-expand-lg navbar-dark ">
 
 <div class="container">
   <div data-aos="zoom-out-down">
