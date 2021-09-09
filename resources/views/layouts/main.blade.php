@@ -31,15 +31,15 @@
       </li>
       <li class="nav-item">
          <div data-aos="zoom-out-down">
-        <a class="nav-link {{ ($title === 'Koleksi') ? 'active' : ''  }}" href="http://127.0.0.1:8000/koleksi#koleksi">Koleksi</a>
+        <a class="nav-link {{ ($title === 'Koleksi') ? 'active' : ''  }}" href="http://127.0.0.1:8000/#koleksi">Koleksi</a>
       </li>
       <li class="nav-item">
          <div data-aos="zoom-out-down">
-        <a class="nav-link {{ ($title === 'Tentang') ? 'active' : ''  }}" href="http://127.0.0.1:8000/about#AboutUs">Tentang</a>
+        <a class="nav-link {{ ($title === 'Tentang') ? 'active' : ''  }}" href="http://127.0.0.1:8000/#AboutUs">Tentang</a>
       </li>
        <li class="nav-item">
           <div data-aos="zoom-out-down">
-        <a class="nav-link {{ ($title === 'Kontak') ? 'active' : ''  }}" href="http://127.0.0.1:8000/contact#contactus">Kontak</a>
+        <a class="nav-link {{ ($title === 'Kontak') ? 'active' : ''  }}" href="http://127.0.0.1:8000/#contactus">Kontak</a>
       </li>  
     </ul>
 </div>

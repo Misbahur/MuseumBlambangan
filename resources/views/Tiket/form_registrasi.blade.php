@@ -20,18 +20,18 @@
               </div>
               <div class="col-12 col-md-6 col-lg-6">
                 <label for="nama" class="form-label">NIK:</label>
-                <input  type="text" class="form-control" name="nik" placeholder="masukkan nik . . . . .">
+                <input  type="text" class="form-control @error ('nik') is-invalid @enderror" name="nik" placeholder="masukkan nik . . . . .">@error('nik')<div class="invalid-feedback">{{ $message }}</div>@enderror
               </div>
             </div>
 
             <div class="row justify-content-center">
                 <div class="col-12 col-md-6 col-lg-6">
                     <label for="nama" class="form-label">EMAIL:</label>
-                  <input type="text" class="form-control" name="Email" placeholder="masukkan email . . . . .">
+                  <input type="text" class="form-control @error ('email') is-invalid @enderror" name="Email" placeholder="masukkan email . . . . .">@error('email')<div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
                 <div class="col-12 col-md-6 col-lg-6">
                     <label for="nama" class="form-label">ALAMAT :</label>
-                  <input  type="text" class="form-control" name="alamat" placeholder="masukkan alamat . . . . .">
+                  <input  type="text" class="form-control @error ('alamat') is-invalid @enderror" name="alamat" placeholder="masukkan alamat . . . . .">@error('alamat')<div class="invalid-feedback">{{ $message }}</div>@enderror
                 </div>
               </div>
 
@@ -45,7 +45,7 @@
                 </div>
                 <div class="form-group col-md-3">
                      <label for="nama" class="form-label">PILIH SESI KUNJUNGAN :</label>
-                    <select class="form-control" type="option" id="waktu" placeholder="Pilih Sesi Kunjungan....." option="08.00 - 10.00 WIB">
+                    <select class="form-select" type="option" id="waktu" placeholder="Pilih Sesi Kunjungan....." option="08.00 - 10.00 WIB">
                         <optgroup label="Pilih Sesi Kunjungan">
                             <option value="">08.00 - 10.00 WIB</option>
                             <option value="">10.00 - 12.00 WIB</option>
@@ -56,17 +56,15 @@
               </div>
           </div>
           <div class="col-12 col-md-6 col-lg-6">
-            <label for="nama" class="form-label">PILIH KATEGORI KUNJUNGAN :</label>
-           <select class="form-control" type="option" name="inovasi" placeholder="Pilih Kategori Kunjungan....." option="08.00 - 10.00 WIB">
-               <optgroup label="Pilih Kategori Kunjungan">
-                   <option value="">INDIVIDU</option>
-                   <option value="">ROMBONGAN</option>
-                   
-               </optgroup>
-           </select>
+            <label id="kategori" for="nama" class="form-label">PILIH KATEGORI KUNJUNGAN :</label>
+            <select id="Categorychoice" onChange="check(this);" class="form-select" aria-label="Default select example">
+              <option selected>-- Pilih Kategori --</option>
+              <option value="individu">Individu</option>
+              <option value="rombongan">Rombongan</option>
+            </select>
        </div>
-       <div class="file mb-3">
-        <label for="formFileSm" class="form-label">Masukkan Surat Disini</label>
+       <div class="file mb-3" id="uploaddoc">
+        <label id="surat" for="formFileSm" class="form-label">Masukkan Surat Disini</label>
         <input class="form-control form-control-sm" id="formFileSm" type="file">
       </div>
       </div>
@@ -75,9 +73,26 @@
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
 
                 <label class="form-check-label" for="exampleCheck1">Pastikan Data Yang Anda Isikan Benar </label>
-            <button type="submit" class="ya btn btn-primary mt-3">Submit</button>
+            <button href="/hasil" class="ya btn btn-primary mt-3">Submit</button>
     </div>
 </form>
 </div>
 </main>
+
+<script>
+
+  function check() {
+    var dropdown = document.getElementById("Categorychoice");
+    var current_value = dropdown.options[dropdown.selectedIndex].value;
+
+    if (current_value == "rombongan") {
+        
+        document.getElementById("uploaddoc").style.display = "block";
+    }
+    else {
+        document.getElementById("uploaddoc").style.display = "none";
+        
+    }
+}
+</script>
 @endsection

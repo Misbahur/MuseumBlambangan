@@ -134,7 +134,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
  
-    <ul class="navbar-nav ms-auto me-auto"> 
+    <!-- <ul class="navbar-nav ms-auto me-auto"> 
       <li class="nav-item">
         <div data-aos="zoom-out-down">
         <a class="nav-link {{ ($title === 'Form-Booking') ? 'active' : ''  }}" aria-current="page" href="/Form-Booking">Isikan data diri anda</a>
@@ -143,7 +143,7 @@
          <div data-aos="zoom-out-down">
         <a class="nav-link {{ ($title === 'Tiket') ? 'active' : ''  }}" href="/hasil">Tiket</a>
 </li>
-    </ul>
+    </ul> -->
 </div>
 </div>
 </div>
