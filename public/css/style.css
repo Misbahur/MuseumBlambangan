@@ -295,6 +295,12 @@ body{
     font-size: 28px;
 }
 
+.card-stats1 .btn:hover{
+    color: rgb(88, 88, 88);
+    background-color: #d1d0d6;
+    border: 1px solid #d1d0d6;
+}
+
 .card-stats2 .btn{
     grid-area: stats;
     display: grid;
@@ -304,6 +310,12 @@ body{
     height: 80px;
     text-align: center;
     font-size: 28px;
+}
+
+.card-stats2 .btn:hover{
+    color: rgb(88, 88, 88);
+    background-color: #d1d0d6;
+    border: 1px solid #d1d0d6;
 }
 
 .card-stats3 .btn{
@@ -317,6 +329,11 @@ body{
     font-size: 28px;
 }
 
+.card-stats3 .btn:hover{
+    color: rgb(88, 88, 88);
+    background-color: #d1d0d6;
+    border: 1px solid #d1d0d6;
+}
 .card-stats4 .btn{
     grid-area: stats;
     display: grid;
@@ -326,6 +343,12 @@ body{
     height: 80px;
     text-align: center;
     font-size: 28px;
+}
+
+.card-stats4 .btn:hover{
+    color: rgb(88, 88, 88);
+    background-color: #d1d0d6;
+    border: 1px solid #d1d0d6;
 }
 
 .card-stats .stat{

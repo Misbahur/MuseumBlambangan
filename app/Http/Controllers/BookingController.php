@@ -38,9 +38,9 @@ class BookingController extends Controller
     {
        $datapengunjung = $request->validate([
             'nama' => 'required|min:1|max:20',
-            'nik' => 'required',
+            'nik' => 'required|min:16',
             'email' => 'required|email:dns',
-            'alamat' => 'required',
+            'alamat' => 'required|min:2',
             'tanggal' => 'required',
             'sesi' => 'required',
             'kategori' => 'required'
