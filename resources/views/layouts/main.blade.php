@@ -27,19 +27,19 @@
     <ul class="navbar-nav ms-auto"> 
       <li class="nav-item">
         <div data-aos="zoom-out-down">
-        <a class="nav-link {{ ($title === 'Beranda') ? 'active' : ''  }}" aria-current="page" href="/">Beranda</a>
+        <a class="nav-link {{ ($title === 'Beranda') ? 'active' : ''  }}" aria-current="page" href="http://127.0.0.1:8000/#beranda">Beranda</a>
       </li>
       <li class="nav-item">
          <div data-aos="zoom-out-down">
-        <a class="nav-link {{ ($title === 'Koleksi') ? 'active' : ''  }}" href="/koleksi">Koleksi</a>
+        <a class="nav-link {{ ($title === 'Koleksi') ? 'active' : ''  }}" href="http://127.0.0.1:8000/koleksi#koleksi">Koleksi</a>
       </li>
       <li class="nav-item">
          <div data-aos="zoom-out-down">
-        <a class="nav-link {{ ($title === 'Tentang') ? 'active' : ''  }}" href="/about">Tentang</a>
+        <a class="nav-link {{ ($title === 'Tentang') ? 'active' : ''  }}" href="http://127.0.0.1:8000/about#AboutUs">Tentang</a>
       </li>
        <li class="nav-item">
           <div data-aos="zoom-out-down">
-        <a class="nav-link {{ ($title === 'Contact') ? 'active' : ''  }}" href="/contact">Kontak</a>
+        <a class="nav-link {{ ($title === 'Kontak') ? 'active' : ''  }}" href="http://127.0.0.1:8000/contact#contactus">Kontak</a>
       </li>  
     </ul>
 </div>
