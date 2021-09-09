@@ -1,22 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="css/tiket.css">
-    <title>Tiket3</title>
-</head>
+@extends('layouts.tiket')
 
-<body>
+@section ('tiket')
 <main>
-    <div id="lambang" class="row mt-5">
-        <div class="col text-center">
-         <img src="https://i.ibb.co/Pw1pYYJ/logo.png" height="180px"  alt="">
-        </div>
-      </div>
       <!-- <div class="text">
             <h3 class="text-center"> BOOKING MUSEUM BLAMBANGAN</h3>
        </div> -->
@@ -26,25 +11,27 @@
        </div>
     <!-- <div class="row justify-content-center"> -->
         <div class="container">
+        <form method="POST" action="/hasil">
+            @csrf
             <div class="row justify-content-center">
               <div class="col-12 col-md-6 col-lg-6">
                 <label for="nama" class="form-label">NAMA:</label>
-                <input type="text" class="form-control" id="nama" placeholder="masukkan nama . . . . .">
+                <input type="text" class="form-control @error ('nama') is-invalid @enderror" name="nama" placeholder="masukkan nama . . . . .">@error('nama')<div class="invalid-feedback">{{ $message }}</div>@enderror
               </div>
               <div class="col-12 col-md-6 col-lg-6">
                 <label for="nama" class="form-label">NIK:</label>
-                <input  type="text" class="form-control" id="nama" placeholder="masukkan nik . . . . .">
+                <input  type="text" class="form-control" name="nik" placeholder="masukkan nik . . . . .">
               </div>
             </div>
 
             <div class="row justify-content-center">
                 <div class="col-12 col-md-6 col-lg-6">
                     <label for="nama" class="form-label">EMAIL:</label>
-                  <input type="text" class="form-control" id="nama" placeholder="masukkan email . . . . .">
+                  <input type="text" class="form-control" name="Email" placeholder="masukkan email . . . . .">
                 </div>
                 <div class="col-12 col-md-6 col-lg-6">
                     <label for="nama" class="form-label">ALAMAT :</label>
-                  <input  type="text" class="form-control" id="nama" placeholder="masukkan alamat . . . . .">
+                  <input  type="text" class="form-control" name="alamat" placeholder="masukkan alamat . . . . .">
                 </div>
               </div>
 
@@ -88,9 +75,9 @@
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
 
                 <label class="form-check-label" for="exampleCheck1">Pastikan Data Yang Anda Isikan Benar </label>
-            <a href="#" class="ya btn btn-primary mt-3">Submit</a>
+            <button type="submit" class="ya btn btn-primary mt-3">Submit</button>
     </div>
+</form>
 </div>
 </main>
-</body>
-</html>
+@endsection

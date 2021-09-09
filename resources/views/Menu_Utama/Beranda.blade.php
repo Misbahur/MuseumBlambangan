@@ -105,12 +105,12 @@ header.classList.toggler ("sticky", window.scrollY > 0);
                   <div class="card-image1"></div>
                   <div class="card-text">
                       <!-- <div class="jenis">Prasejarah</div> -->
-                      <p>AUSTRONESIA, masyarakat yang memperkenalkan cara bercocok tanam hingga domestikasi binatang di kepulauan Indonesia. Penutur Austronesia muncul sekitar 7000 - 6000 SM yang lalu di Taiwan Kemudian menyebar keberbagai belahan dunia sejak 5000 SM.
+                      <p>Alat batu yang berasal dari periode neolitik (3500 SM). Beliung ini telah diserpih, diupam, dan memiliki bidang tajam.
                       </p>
                   </div>
                   <div class="card-stats1">
-                      <div class="stat mt-3">
-                          <div class="type">Prasejarah</div>
+                      <div class="stat">
+                          <a class="btn" href="/prasejarah">Prasejarah</a>
                       </div>
                   </div> 
               </div>
@@ -123,8 +123,8 @@ header.classList.toggler ("sticky", window.scrollY > 0);
                       </p>
                   </div>
                   <div class="card-stats2">
-                      <div class="stat mt-3">
-                          <div class="type">Hindu-Budha</div>
+                      <div class="stat">
+                          <a class="btn" href="/hindu-budha">Hindu-Budha</a>
                       </div>
                   </div> 
               </div>
@@ -132,14 +132,12 @@ header.classList.toggler ("sticky", window.scrollY > 0);
                   <div class="card-image3"></div>
                   <div class="card-text">
                       <!-- <div class="jenis">Islam</div> -->
-                      <p>This hobby is my newest hobby, I'd love this activities around a year ago. For me it's very important
-                          as a college student to develop literacy. For now I really like book of self improvement. I'd like this
-                           genre because good for my life.
+                      <p>Kitab beraksara Arab dan berbahasa campuran Arab dan Jawa. Berisi tentang pernikahan, haji, dan aturan lainnya terkait keislaman.
                       </p>
                   </div>
                   <div class="card-stats3">
-                      <div class="stat mt-3">
-                          <div class="type">Islam</div>
+                      <div class="stat">
+                          <a class="btn" href="/islam">Islam</a>
                       </div>
                   </div> 
               </div>
@@ -150,14 +148,12 @@ header.classList.toggler ("sticky", window.scrollY > 0);
                   <div class="card-image4"></div>
                   <div class="card-text">
                       <!-- <div class="jenis">Kolonial</div> -->
-                      <p>This hobby is my newest hobby, I'd love this activities around a year ago. For me it's very important
-                          as a college student to develop literacy. For now I really like book of self improvement. I'd like this
-                           genre because good for my life.
+                      <p>Mesin Tik merek Halda. Diproduksi oleh N.V. G.Kolff di Batavia tahun 1848.
                       </p>
                   </div>
                   <div class="card-stats4">
-                      <div class="stat mt-3">
-                          <div class="type">Kolonial</div>
+                      <div class="stat">
+                          <a class="btn"href="/kolonial">Kolonial</a>
                       </div>
                   </div> 
               </div>

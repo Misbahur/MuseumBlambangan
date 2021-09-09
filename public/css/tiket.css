@@ -86,9 +86,14 @@ margin-bottom: 12px;
 
 
 #lambang{
-	/* padding: 4px;
-	background-color: #e8e8e8; */
 	background-size: cover;
+
+  
+}
+
+#lambang img{
+
+    margin-top: 50px;
   
 }
 
