@@ -4,6 +4,7 @@
 <!--Stop Navbar -->
 
 <!-- Beranda Carausel-->
+<section id="beranda">
 <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
 <div class="carousel-indicators">
   <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -248,6 +249,7 @@ header.classList.toggler ("sticky", window.scrollY > 0);
       </div>
     </div>
   </div>
+</section>
 </section>
 
 @endsection
