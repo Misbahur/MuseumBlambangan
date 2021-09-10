@@ -14,13 +14,17 @@
         <form method="POST" action="/hasil">
             @csrf
             <div class="row justify-content-center">
+            <div class="col-12 col-md-6 col-lg-6">
+            <label id="kategori" for="nama" class="form-label">PILIH KATEGORI KUNJUNGAN :</label>
+            <select id="Categorychoice" onChange="check(this);" class="form-select" aria-label="Default select example">
+              <option selected>-- Pilih Kategori --</option>
+              <option value="individu">Individu</option>
+              <option value="rombongan">Rombongan</option>
+            </select>
+            </div>
               <div class="col-12 col-md-6 col-lg-6">
                 <label for="nama" class="form-label">NAMA:</label>
                 <input type="text" class="form-control @error ('nama') is-invalid @enderror" name="nama" placeholder="masukkan nama . . . . .">@error('nama')<div class="invalid-feedback">{{ $message }}</div>@enderror
-              </div>
-              <div class="col-12 col-md-6 col-lg-6">
-                <label for="nama" class="form-label">NIK:</label>
-                <input  type="text" class="form-control @error ('nik') is-invalid @enderror" name="nik" placeholder="masukkan nik . . . . .">@error('nik')<div class="invalid-feedback">{{ $message }}</div>@enderror
               </div>
             </div>
 
@@ -55,15 +59,11 @@
                 </div>
               </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-6">
-            <label id="kategori" for="nama" class="form-label">PILIH KATEGORI KUNJUNGAN :</label>
-            <select id="Categorychoice" onChange="check(this);" class="form-select" aria-label="Default select example">
-              <option selected>-- Pilih Kategori --</option>
-              <option value="individu">Individu</option>
-              <option value="rombongan">Rombongan</option>
-            </select>
-       </div>
-       <div class="file mb-3" id="uploaddoc">
+       <div class="col-12 col-md-6 col-lg-6">
+                <label for="nama" class="form-label">NIK:</label>
+                <input  type="text" class="form-control @error ('nik') is-invalid @enderror" name="nik" placeholder="masukkan nik . . . . .">@error('nik')<div class="invalid-feedback">{{ $message }}</div>@enderror
+              </div>
+       <div class="file mb-3" id="uploaddoc" style="display: none;">
         <label id="surat" for="formFileSm" class="form-label">Masukkan Surat Disini</label>
         <input class="form-control form-control-sm" id="formFileSm" type="file">
       </div>
@@ -84,6 +84,7 @@
   function check() {
     var dropdown = document.getElementById("Categorychoice");
     var current_value = dropdown.options[dropdown.selectedIndex].value;
+    console.log(current_value);
 
     if (current_value == "rombongan") {
         
