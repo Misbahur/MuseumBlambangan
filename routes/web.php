@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\SesiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,17 @@ use App\Http\Controllers\BookingController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::group(['middleware' => 'auth'], function(){
+
+    Route::get('/login', function () {
+        return view('welcome');
+    });
+    
+    Route::get('/home', function () {
+        return view('home');
+    });
+});
 
 Route::get('/', function () {
     return view('/Menu_Utama/beranda',[
@@ -40,17 +52,17 @@ Route::get('/contact', function () {
     ]);
 });
 
-Route::get('/form-booking', function () {
-    return view('/Tiket/form_registrasi',[
-        "title" => "Form-Booking"
-    ]);
-});
+// Route::get('/form-booking', function () {
+//     return view('/Tiket/form_registrasi',[
+//         "title" => "Form-Booking"
+//     ]);
+// });
 
-Route::get('/hasil', function () {
-    return view('/Tiket/form_rombongan',[
-        "title" => "Tiket"
-    ]);
-});
+// Route::get('/hasil', function () {
+//     return view('/Tiket/form_rombongan',[
+//         "title" => "Tiket"
+//     ]);
+// });
 
 Route::get('/prasejarah', function () {
     return view('/koleksi/prasejarah',[
@@ -86,9 +98,14 @@ Route::get('/kolonial', function () {
 //             'kategori' => 'required'
 //     ]);
 // });
-Route::resource('/hasil', App\Http\Controllers\BookingController::class);
+Route::resource('/sesi', 'App\Http\Controllers\SesiController');
+Route::resource('/kategori', 'App\Http\Controllers\KategoriController');
 // Route::post('/Tiket/form_registrasi', [App\Http\Controllers\BookingController::class, 'store']);
 // Route::post('/hasil', 'App\Http\Controllers\BookingController@store');
+
+Route::get('/hasil', 'App\Http\Controllers\HasilController@data');
+Route::get('/form-booking', 'App\Http\Controllers\HasilController@add');
+Route::post('/hasil', 'App\Http\Controllers\HasilController@cetakdata');
 
 Auth::routes();
 

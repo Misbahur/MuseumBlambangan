@@ -5,7 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Kategori extends Model
+class kategori extends Model
 {
-    use HasFactory;
+    // public function pengunjungs()
+    // {
+    //     return $this->belongsTo(pengunjung::class);
+    // }
+
+    public function pengunjungs()
+    {
+        return $this->hasMany(pengunjung::class);
+    }
 }

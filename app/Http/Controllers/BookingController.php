@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pengunjung;
+use App\Models\Kategori;
+use App\Models\Sesi;
 
 class BookingController extends Controller
 {
@@ -14,8 +16,8 @@ class BookingController extends Controller
      */
     public function index()
     {
-        return view('Tiket.form_rombongan');
-            
+       $pengunjungs = Pengunjung::all();  
+       return view('/hasil', compact($pengunjungs));
     }
 
     /**
@@ -25,7 +27,7 @@ class BookingController extends Controller
      */
     public function create()
     {
-        return view('/Tiket/form_registrasi');
+        
     }
 
     /**
@@ -36,19 +38,7 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
-       $datapengunjung = $request->validate([
-            'nama' => 'required|min:1|max:20',
-            'nik' => 'required|min:16',
-            'email' => 'required|email:dns',
-            'alamat' => 'required|min:2',
-            'tanggal' => 'required',
-            'sesi' => 'required',
-            'kategori' => 'required'
-         ]);
 
-         pengunjung::create($datapengunjung);
-  
-         return redirect('/Tiket/form_rombongan')->with('succes', 'anda telah terdaftar');
     }
 
     /**

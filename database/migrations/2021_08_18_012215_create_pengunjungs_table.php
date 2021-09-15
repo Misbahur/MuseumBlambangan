@@ -14,16 +14,17 @@ class CreatePengunjungsTable extends Migration
     public function up()
     {
         Schema::create('pengunjungs', function (Blueprint $table) {
-            $table->id('pengunjung');
+            $table->id();
+            $table->unSignedBigInteger('kategori_id');
             $table->string('Nama_Pengunjung');
-            $table->string('email')->unique();
-            $table->integer('No_HP');
+            $table->string('email');
             $table->integer('NIK');
             $table->string('Alamat');
             $table->date('Berkunjung_Pada');
-            $table->time('Pilih_Sesi_Kunjungan');
-
+            $table->unSignedBigInteger('sesi_id');
+            $table->timestamps();
         });
+        
     }
 
     /**
