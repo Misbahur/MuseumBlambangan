@@ -119,7 +119,7 @@
     
 }
 </style>
-    <title>Museum Blambangan | {{ $title }} </title>
+    <title>Museum Blambangan | {{ $title }}</title>
 </head>
 
 <body>
@@ -134,16 +134,6 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
  
-    <!-- <ul class="navbar-nav ms-auto me-auto"> 
-      <li class="nav-item">
-        <div data-aos="zoom-out-down">
-        <a class="nav-link {{ ($title === 'Form-Booking') ? 'active' : ''  }}" aria-current="page" href="/Form-Booking">Isikan data diri anda</a>
-      </li>
-      <li class="nav-item">
-         <div data-aos="zoom-out-down">
-        <a class="nav-link {{ ($title === 'Tiket') ? 'active' : ''  }}" href="/hasil">Tiket</a>
-</li>
-    </ul> -->
 </div>
 </div>
 </div>

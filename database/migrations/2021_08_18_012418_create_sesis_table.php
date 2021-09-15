@@ -14,11 +14,11 @@ class CreateSesisTable extends Migration
     public function up()
     {
         Schema::create('sesis', function (Blueprint $table) {
-            $table->id('sesi');
+            $table->id();
             $table->string('nama_sesi',50);
-            $table->time('mulai');
-            $table->time('selesai');
+            $table->string('waktu');
             $table->string('deskripsi',50);
+            $table->timestamps();
         });
     }
 
