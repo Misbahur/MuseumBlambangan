@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\SesiController;
-
+use Illuminate\Support\Facades\Redirect;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,6 +26,11 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/home', function () {
         return view('home');
     });
+    
+    Route::resource('/sesi', 'App\Http\Controllers\SesiController');
+    Route::resource('/kategori', 'App\Http\Controllers\KategoriController');
+    Route::resource('/transaksi', 'App\Http\Controllers\TransaksiController');
+    Route::get('/transaksi/status/{Transaksi}','App\Http\Controllers\TransaksiController@status');
 });
 
 Route::get('/', function () {
@@ -98,8 +103,7 @@ Route::get('/kolonial', function () {
 //             'kategori' => 'required'
 //     ]);
 // });
-Route::resource('/sesi', 'App\Http\Controllers\SesiController');
-Route::resource('/kategori', 'App\Http\Controllers\KategoriController');
+
 // Route::post('/Tiket/form_registrasi', [App\Http\Controllers\BookingController::class, 'store']);
 // Route::post('/hasil', 'App\Http\Controllers\BookingController@store');
 
