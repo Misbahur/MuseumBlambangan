@@ -2,6 +2,11 @@
 
 @section ('tiket')
 <main>
+  @if ($message = Session::get('success'))
+        <div class="alert alert-success">
+            <p>{{ $message }}</p>
+        </div>
+    @endif
     <div class="container">
       <div class="text">
         <h3 class="text-center"> Selamat Data Anda telah terkonfirmasi</h3>
@@ -11,26 +16,26 @@
         <div class="col-sm-6 mb-5 mt-5">
          
 
-          <h5 class="nama1 card-title">Nama</h5>
+          <h4 class="nama1 card-title">Nama</h4>
           <p class="nama card-text">: {{ $datapengunjung->Nama_Pengunjung }}</p>
 
-          <h5 class="nama1 card-title">NIK</h5>
+          <h4 class="nama1 card-title">NIK</h4>
           <p class="nama card-text">: {{ $datapengunjung->NIK }}</p>
 
           <h5 class="nama1 card-title">Email</h5>
           <p class="nama card-text">: {{ $datapengunjung->email }}</p>
 
-          <h5 class="nama1 card-title">Alamat</h5>
+          <h4 class="nama1 card-title">Alamat</h4>
           <p class="nama card-text">: {{ $datapengunjung->Alamat }}</p>
 
-          <h5 class="nama1 card-title">Kunjungan Pada</h5>
+          <h4 class="nama1 card-title">Kunjungan Pada</h4>
           <p class="nama card-text">: {{ $datapengunjung->Berkunjung_Pada }}</p>
 
-          <h5 class="nama1 card-title">Sesi Kunjungan</h5>
-          <p class="nama card-text">: {{ $datapengunjung->sesis->waktu }}</p>
+          <h4 class="nama1 card-title">Sesi Kunjungan</h4>
+          <p class="nama card-text">: {{ $datapengunjung->sesi->waktu }}</p>
 
-          <h5 class="nama1 card-title">Kategori</h5>
-          <p class="nama card-text">: {{ $datapengunjung->kategoris->kategori }}</p>
+          <h4 class="nama1 card-title">Kategori</h4>
+          <p class="nama card-text">: {{ $datapengunjung->kategori->Kategori }}</p>
 
 
          

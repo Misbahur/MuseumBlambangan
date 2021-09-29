@@ -7,5 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Transaksi extends Model
 {
-    use HasFactory;
+    protected $attributes = [
+        'Status' => false,
+    ];
+
+    public function Pengunjung()
+    {
+        return $this->belongsTo(Pengunjung::class);
+    }
 }

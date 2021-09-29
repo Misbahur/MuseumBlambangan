@@ -7,13 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class sesi extends Model
 {
-    // public function pengunjungs()
-    // {
-    //     return $this->belongsTo(pengunjung::class);
-    // }
-
-    public function pengunjungs()
-    {
-        return $this->hasMany(pengunjung::class);
-    }
+    protected $fillable = [
+        'nama_sesi',
+        'waktu',
+        'deskripsi',
+    ];
 }

@@ -9,6 +9,15 @@
        <div class="text">
          <h3 class="text-center"> BOOKING MUSEUM BLAMBANGAN</h3>
        </div>
+       @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
        <!-- <div class="row justify-content-center"> -->
         <div class="container">
           <form method="POST" action="{{ url('/hasil') }}">
@@ -48,9 +57,9 @@
                       <select class="form-select" type="option" id="waktu" name="sesi" placeholder="Pilih Sesi Kunjungan....." option="08.00 - 10.00 WIB">
                         <optgroup label="Pilih Sesi Kunjungan">
                           <option selected>-- Pilih Sesi Kunjungan --</option>
-                          <option value="1">08.00 - 10.00 WIB</option>
-                          <option value="2">10.00 - 12.00 WIB</option>
-                          <option value="3">13.00 - 15.00 WIB</option>
+                          @foreach ($sesi as $waktu)                         
+                          <option value="{{ $waktu->id }}">{{ $waktu->waktu }}</option>
+                          @endforeach
                         </optgroup>
                       </select>
                     </div>
@@ -60,8 +69,9 @@
                 <label id="kategori" for="nama" class="form-label">PILIH KATEGORI KUNJUNGAN :</label>
                 <select id="Categorychoice" name="kategori" onChange="check(this);" class="form-select" aria-label="Default select example">
                   <option selected>-- Pilih Kategori --</option>
-                  <option value="1">Individu</option>
-                  <option value="2">Rombongan</option>
+                  @foreach ($kategori as $item)
+                    <option value="{{ $item->id }}">{{ $item->Kategori }}</option>
+                  @endforeach
                 </select>
                 </div>
        <div class="file mb-3" id="uploaddoc" style="display: none;">
